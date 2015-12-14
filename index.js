@@ -1,6 +1,6 @@
 var express = require('express');
-var five = require("johnny-five");
-var EtherPort = require("etherport");
+/*var five = require("johnny-five");
+var EtherPort = require("etherport");*/
 var app = express();
 
 app.set('port', (process.env.PORT || 5000));
