@@ -4,9 +4,9 @@ var EtherPort = require("etherport");
 var app = express();
 var bodyParser = require('body-parser');
 
-/*var board = new five.Board({ 
+var board = new five.Board({ 
     port: new EtherPort(3030) 
-});*/
+});
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
