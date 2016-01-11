@@ -1,5 +1,5 @@
 var express = require('express');
-var five = require("johnny-five");
+var five = require("./lib/johnny-five");
 var EtherPort = require("etherport");
 var app = express();
 var bodyParser = require('body-parser');
