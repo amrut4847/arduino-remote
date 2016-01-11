@@ -30,6 +30,7 @@ board.on("ready", function() {
 
 board.on("ready", function() {
     var led = new five.Led(8);
+    console.log("Board Ready");
 	app.post('/togglebtn/on', function(request, response) {
 		var check = request.body;
 		console.log(check.key);
