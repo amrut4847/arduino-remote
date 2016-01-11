@@ -29,7 +29,7 @@ board.on("ready", function() {
   response.render('pages/index');
 });
 
-board.on("ready", function() {
+/*board.on("ready", function() {
     var led = new five.Led(8);
     console.log("Board Ready");
 	app.post('/togglebtn/on', function(request, response) {
@@ -45,7 +45,7 @@ board.on("ready", function() {
 		led.off();
 		response.send({"msg":check.key});
 	});
-})
+})*/
 
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
