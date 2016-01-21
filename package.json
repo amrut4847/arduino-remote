@@ -1,29 +1,22 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.1.5",
-  "description": "A sample Node.js app using Express 4",
+  "name": "zetta-led-driver",
+  "version": "0.1.0",
+  "description": "Zetta led driver for any platform",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.14.2",
-    "ejs": "2.3.3",
-    "express": "4.13.3",
-    "johnny-five": "",
-    "etherport": ""
+    "zetta-device": "*",
+    "zetta-scout": "*"
   },
-  "engines": {
-    "node": "0.12.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+  "directories": {
+    "example": "example"
   },
   "keywords": [
-    "node",
-    "heroku",
-    "express"
-  ],
-  "license": "MIT"
+    "zetta",
+    "led",
+    "any platform"
+  ]
 }
