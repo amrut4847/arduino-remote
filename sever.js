@@ -1,3 +1,4 @@
+var zetta = require('zetta');
 var LED = require('zetta-led-mock-driver');
 
 zetta()
