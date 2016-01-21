@@ -9,7 +9,8 @@
   "license": "MIT",
   "dependencies": {
     "zetta-device": "*",
-    "zetta-scout": "*"
+    "zetta-scout": "*",
+    "zetta-led-mock-driver": "^0.9.0"
   },
   "directories": {
     "example": "example"
