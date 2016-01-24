@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <% include ../partials/header.ejs %>
+  <style type="text/css">
+  body{
+    background-color:  #070905;
+    color: #ffffff;
+  }
+  h2,h1,.bulb{
+    text-align: center;
+  }
+  .toggle{
+    margin-top: 20px;
+  }
+  .image-led{
+    text-align: center;
+    margin-top: 40px;
+  } 
+  </style>
+</head>
+<body>
+<h1>
+  Hello World....
+</h1>
+<hr>
+<div class="bulb">
+  <label for="switch">Make Bulb ON Or OFF Remotely: </label><br/>
+  <input id="switch" checked data-toggle="toggle" type="checkbox">
+</div>
+<div class="image-led">
+  <img src="/LED_blink_320.gif">
+</div>
+<h2 id="message">
+  
+</h2>
+<script>
+ $(function() {
+  $('#switch').bootstrapToggle('off')
+  var toggle = "";
+    $('#switch').change(function() {
+      if($(this).prop('checked') == true){
+        toggle = "ON"; 
+      }else{
+        toggle = "OFF";
+      }
+
+      $.ajax({
+        url: "/togglebtn/"+toggle,
+        type: "post",
+        data: {"key":toggle},
+        success: function(result){
+         $("#message").html("Bulb is now: "+result.msg);
+      }});
+    })
+  })
+</script>
+</body>
+</html>
